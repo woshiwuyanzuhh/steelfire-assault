@@ -1,0 +1,103 @@
+{
+  "id": "level_27_thermal_boots",
+  "index": 27,
+  "act": 6,
+  "title": "冰脊检修道：热靴试炼",
+  "world_width": 11520,
+  "story_cue": "story_l27_intro",
+  "new_mechanic": {
+    "id": "thermal_boots",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "153",
+      "severity": "1",
+      "visual_variant": "3"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l27_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l27_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l27_b01",
+      "x": 360,
+      "purpose": "teach_thermal_boots",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "thermal_boots",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l27_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_27/thermal_boots"
+      ]
+    },
+    {
+      "id": "l27_b02",
+      "x": 3000,
+      "purpose": "combine_thermal_boots",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "thermal_boots",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l27_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_27/thermal_boots"
+      ]
+    },
+    {
+      "id": "l27_b03",
+      "x": 6000,
+      "purpose": "pressure_thermal_boots",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "thermal_boots",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l27_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_27/thermal_boots"
+      ]
+    },
+    {
+      "id": "l27_b04",
+      "x": 8500,
+      "purpose": "clear_thermal_boots",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "thermal_boots",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l27_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_27/thermal_boots"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_27/manifest.json"
+}

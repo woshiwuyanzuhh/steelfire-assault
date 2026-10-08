@@ -1,0 +1,63 @@
+{
+  "id": "level_02_broken_bridge_echo",
+  "index": 2,
+  "act": 1,
+  "title": "断桥回声",
+  "world_width": 11520,
+  "story_cue": "story_l02_intro",
+  "new_mechanic": {
+    "id": "bridge_collapse",
+    "version": 1,
+    "warning_ticks": 30,
+    "collapse_ticks": 18,
+    "segments": [
+      {"id": "bridge_a", "x": 1320, "y": 430, "width": 360, "capacity": 2, "warning_ticks": 30, "collapse_ticks": 18, "winch_id": "winch_a", "plank_id": "plank_a"},
+      {"id": "bridge_b", "x": 2240, "y": 410, "width": 360, "capacity": 2, "warning_ticks": 30, "collapse_ticks": 18, "winch_id": "winch_b", "plank_id": "plank_b"},
+      {"id": "bridge_c", "x": 3180, "y": 390, "width": 420, "capacity": 3, "warning_ticks": 30, "collapse_ticks": 18, "winch_id": "winch_c", "plank_id": "plank_c"}
+    ]
+  },
+  "checkpoints": [
+    {"id": "l02_checkpoint", "x": 2400},
+    {"id": "l02_clear", "x": 7200}
+  ],
+  "beats": [
+    {
+      "id": "l02_b01",
+      "x": 360,
+      "purpose": "teach_bridge_collapse",
+      "enemy_kinds": ["regular", "elite"],
+      "mechanic_params": {"id": "bridge_collapse", "segment_id": "bridge_a"},
+      "story_cue": "story_l02_intro",
+      "asset_refs": ["gfx/backgrounds/industrial_port.png", "procedural:levels/level_02/bridge_tiles"]
+    },
+    {
+      "id": "l02_b02",
+      "x": 1320,
+      "purpose": "collapse_warning_run",
+      "enemy_kinds": ["regular", "sentry"],
+      "mechanic_params": {"id": "bridge_collapse", "segment_id": "bridge_a"},
+      "story_cue": "story_l02_mid",
+      "asset_refs": ["gfx/characters/enemy_sheet.png", "procedural:levels/level_02/bridge_cracks"]
+    },
+    {
+      "id": "l02_b03",
+      "x": 2240,
+      "purpose": "cut_winch_deploy_plank",
+      "enemy_kinds": ["regular", "shield_carrier"],
+      "mechanic_params": {"id": "bridge_collapse", "segment_id": "bridge_b", "winch_id": "winch_b"},
+      "story_cue": "story_l02_mid",
+      "asset_refs": ["gfx/backgrounds/industrial_port.png", "procedural:levels/level_02/winch"]
+    },
+    {
+      "id": "l02_b04",
+      "x": 3180,
+      "purpose": "edge_grab_escape",
+      "enemy_kinds": ["elite", "short_hop_drone"],
+      "mechanic_params": {"id": "bridge_collapse", "segment_id": "bridge_c"},
+      "story_cue": "story_l02_end",
+      "asset_refs": ["gfx/characters/operative_sheet.png", "procedural:levels/level_02/plank"]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_02/manifest.json"
+}

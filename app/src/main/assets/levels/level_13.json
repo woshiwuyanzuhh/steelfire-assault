@@ -1,0 +1,103 @@
+{
+  "id": "level_13_reverse_current_gate",
+  "index": 13,
+  "act": 3,
+  "title": "逆流闸门",
+  "world_width": 11520,
+  "story_cue": "story_l13_intro",
+  "new_mechanic": {
+    "id": "current_flip",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "151",
+      "severity": "2",
+      "visual_variant": "1"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l13_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l13_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l13_b01",
+      "x": 360,
+      "purpose": "teach_current_flip",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "current_flip",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l13_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_13/current_flip"
+      ]
+    },
+    {
+      "id": "l13_b02",
+      "x": 3000,
+      "purpose": "combine_current_flip",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "current_flip",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l13_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_13/current_flip"
+      ]
+    },
+    {
+      "id": "l13_b03",
+      "x": 6000,
+      "purpose": "pressure_current_flip",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "current_flip",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l13_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_13/current_flip"
+      ]
+    },
+    {
+      "id": "l13_b04",
+      "x": 8500,
+      "purpose": "clear_current_flip",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "current_flip",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l13_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_13/current_flip"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_13/manifest.json"
+}

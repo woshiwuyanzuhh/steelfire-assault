@@ -1,0 +1,5 @@
+Level 43 campaign evidence
+verify_50_level_assets.py: PASS (all 50 levels)
+verify_campaign_runtime.py: PASS
+runtime path: PASS (JSON loader, authored beats, checkpoint, generic/Boss or extraction result)
+Device: ADB unavailable on 2026-10-04; cold start, touch route, background, offline and performance evidence remain pending.

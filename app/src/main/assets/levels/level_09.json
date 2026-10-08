@@ -1,0 +1,103 @@
+{
+  "id": "level_09_sandstorm_escort",
+  "index": 9,
+  "act": 2,
+  "title": "沙尘护送",
+  "world_width": 11520,
+  "story_cue": "story_l09_intro",
+  "new_mechanic": {
+    "id": "escort_route",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "99",
+      "severity": "1",
+      "visual_variant": "3"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l09_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l09_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l09_b01",
+      "x": 360,
+      "purpose": "teach_escort_route",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "escort_route",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l09_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_09/escort_route"
+      ]
+    },
+    {
+      "id": "l09_b02",
+      "x": 3000,
+      "purpose": "combine_escort_route",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "escort_route",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l09_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_09/escort_route"
+      ]
+    },
+    {
+      "id": "l09_b03",
+      "x": 6000,
+      "purpose": "pressure_escort_route",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "escort_route",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l09_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_09/escort_route"
+      ]
+    },
+    {
+      "id": "l09_b04",
+      "x": 8500,
+      "purpose": "clear_escort_route",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "escort_route",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l09_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_09/escort_route"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_09/manifest.json"
+}

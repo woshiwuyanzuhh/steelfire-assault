@@ -1,0 +1,103 @@
+{
+  "id": "level_43_memory_sequence",
+  "index": 43,
+  "act": 9,
+  "title": "记忆档案：序列夺回",
+  "world_width": 11520,
+  "story_cue": "story_l43_intro",
+  "new_mechanic": {
+    "id": "memory_sequence",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "91",
+      "severity": "2",
+      "visual_variant": "1"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l43_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l43_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l43_b01",
+      "x": 360,
+      "purpose": "teach_memory_sequence",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "memory_sequence",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l43_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_43/memory_sequence"
+      ]
+    },
+    {
+      "id": "l43_b02",
+      "x": 3000,
+      "purpose": "combine_memory_sequence",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "memory_sequence",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l43_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_43/memory_sequence"
+      ]
+    },
+    {
+      "id": "l43_b03",
+      "x": 6000,
+      "purpose": "pressure_memory_sequence",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "memory_sequence",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l43_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_43/memory_sequence"
+      ]
+    },
+    {
+      "id": "l43_b04",
+      "x": 8500,
+      "purpose": "clear_memory_sequence",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "memory_sequence",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l43_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_43/memory_sequence"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_43/manifest.json"
+}

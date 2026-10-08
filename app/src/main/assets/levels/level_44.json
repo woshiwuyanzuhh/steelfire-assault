@@ -1,0 +1,103 @@
+{
+  "id": "level_44_dual_world",
+  "index": 44,
+  "act": 9,
+  "title": "双界走廊：真假核心",
+  "world_width": 11520,
+  "story_cue": "story_l44_intro",
+  "new_mechanic": {
+    "id": "dual_world",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "104",
+      "severity": "3",
+      "visual_variant": "2"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l44_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l44_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l44_b01",
+      "x": 360,
+      "purpose": "teach_dual_world",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "dual_world",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l44_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_44/dual_world"
+      ]
+    },
+    {
+      "id": "l44_b02",
+      "x": 3000,
+      "purpose": "combine_dual_world",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "dual_world",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l44_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_44/dual_world"
+      ]
+    },
+    {
+      "id": "l44_b03",
+      "x": 6000,
+      "purpose": "pressure_dual_world",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "dual_world",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l44_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_44/dual_world"
+      ]
+    },
+    {
+      "id": "l44_b04",
+      "x": 8500,
+      "purpose": "clear_dual_world",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "dual_world",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l44_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_44/dual_world"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_44/manifest.json"
+}

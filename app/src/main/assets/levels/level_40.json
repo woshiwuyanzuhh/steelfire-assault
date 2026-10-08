@@ -1,0 +1,143 @@
+{
+  "id": "level_40_drill_emperor_boss",
+  "index": 40,
+  "act": 8,
+  "title": "深井钻皇：压力王座",
+  "world_width": 11520,
+  "story_cue": "story_l40_intro",
+  "new_mechanic": {
+    "id": "drill_emperor",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "142",
+      "severity": "2",
+      "visual_variant": "4"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l40_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l40_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l40_b01",
+      "x": 360,
+      "purpose": "teach_drill_emperor",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "drill_emperor",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l40_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_40/drill_emperor"
+      ]
+    },
+    {
+      "id": "l40_b02",
+      "x": 3000,
+      "purpose": "combine_drill_emperor",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "drill_emperor",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l40_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_40/drill_emperor"
+      ]
+    },
+    {
+      "id": "l40_b03",
+      "x": 6000,
+      "purpose": "pressure_drill_emperor",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "drill_emperor",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l40_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_40/drill_emperor"
+      ]
+    },
+    {
+      "id": "l40_b04",
+      "x": 8500,
+      "purpose": "clear_drill_emperor",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "drill_emperor",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l40_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_40/drill_emperor"
+      ]
+    },
+    {
+      "id": "l40_b05",
+      "x": 10200,
+      "purpose": "boss_arena_drill_emperor",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "drill_emperor",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l40_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_40/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l40_drill_emperor_boss",
+    "name": "深井钻皇：压力王座",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_40/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_40/manifest.json"
+}

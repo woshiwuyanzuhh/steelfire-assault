@@ -1,0 +1,103 @@
+{
+  "id": "level_23_skycar_chase",
+  "index": 23,
+  "act": 5,
+  "title": "云车追击",
+  "world_width": 11520,
+  "story_cue": "story_l23_intro",
+  "new_mechanic": {
+    "id": "vehicle_jump",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "101",
+      "severity": "3",
+      "visual_variant": "5"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l23_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l23_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l23_b01",
+      "x": 360,
+      "purpose": "teach_vehicle_jump",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "vehicle_jump",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l23_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_23/vehicle_jump"
+      ]
+    },
+    {
+      "id": "l23_b02",
+      "x": 3000,
+      "purpose": "combine_vehicle_jump",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "vehicle_jump",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l23_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_23/vehicle_jump"
+      ]
+    },
+    {
+      "id": "l23_b03",
+      "x": 6000,
+      "purpose": "pressure_vehicle_jump",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "vehicle_jump",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l23_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_23/vehicle_jump"
+      ]
+    },
+    {
+      "id": "l23_b04",
+      "x": 8500,
+      "purpose": "clear_vehicle_jump",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "vehicle_jump",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l23_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_23/vehicle_jump"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_23/manifest.json"
+}

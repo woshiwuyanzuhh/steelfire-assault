@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "level_id": "level_19_overheat_protocol",
+  "assets": [
+    {
+      "id": "industrial_port",
+      "path": "gfx/backgrounds/industrial_port.png",
+      "kind": "background",
+      "source": "project_original",
+      "license": "project-original",
+      "size_bytes": 2450183,
+      "sha256": "f328a9dd1b6b9d0725d11055369448fb91310ab3d5476d1275441dbba9e2c26c",
+      "generator": "art/generated/industrial_port",
+      "fallback": "canvas_industrial_harbor"
+    },
+    {
+      "id": "enemy_sheet",
+      "path": "gfx/characters/enemy_sheet.png",
+      "kind": "enemy",
+      "source": "project_original",
+      "license": "project-original",
+      "size_bytes": 1253414,
+      "sha256": "591728869937ca88a80a7269674c9bf71b273d6d165421c5c09553fd1a4bcf23",
+      "generator": "art/generated/enemy_sheet",
+      "fallback": "canvas_enemy_primitives"
+    },
+    {
+      "id": "operative_sheet",
+      "path": "gfx/characters/operative_sheet.png",
+      "kind": "player",
+      "source": "project_original",
+      "license": "project-original",
+      "size_bytes": 1290639,
+      "sha256": "d5ffc2c4cb3ffbf49a71e540d25a8fb868eebc6b80e66ffee6cc66c39aa41850",
+      "generator": "art/generated/operative_sheet",
+      "fallback": "canvas_operative_primitives"
+    }
+  ],
+  "procedural_assets": [
+    {
+      "id": "weapon_overheat",
+      "kind": "mechanic_geometry",
+      "generator": "Canvas authored mechanic primitive v1",
+      "license": "project-original"
+    },
+    {
+      "id": "l19_collision",
+      "kind": "collision_layer",
+      "generator": "Canvas authored collision plane v1",
+      "license": "project-original"
+    },
+    {
+      "id": "l19_particles",
+      "kind": "particle_profile",
+      "generator": "Canvas authored particle profile v1",
+      "license": "project-original"
+    },
+    {
+      "id": "story_l19_cue",
+      "kind": "subtitle",
+      "generator": "Canvas story-cue primitive v1",
+      "license": "project-original"
+    }
+  ],
+  "audio": [
+    {
+      "id": "ui_cue",
+      "kind": "audio",
+      "path": "audio/sfx/ui.wav",
+      "source": "project_original",
+      "license": "project-original",
+      "size_bytes": 4454,
+      "sha256": "782cf9a6833352624eafc04e1323e17efd2a7a8fa59ff76a4b402de78db4eb93",
+      "generator": "tools/audio/synthesize_ui",
+      "fallback": "silent_local_cue"
+    }
+  ],
+  "offline_only": true
+}

@@ -1,0 +1,5 @@
+UI-01 static evidence
+verify_ui_save.py: PASS
+verify_gameplay_slice.ps1: PASS
+build-apk.ps1: BUILD SUCCESSFUL
+Device: ADB unavailable on 2026-10-04; screenshots pending reconnect

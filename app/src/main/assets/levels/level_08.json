@@ -1,0 +1,103 @@
+{
+  "id": "level_08_relay_cipher",
+  "index": 8,
+  "act": 2,
+  "title": "中继密码",
+  "world_width": 11520,
+  "story_cue": "story_l08_intro",
+  "new_mechanic": {
+    "id": "frequency_pair",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "86",
+      "severity": "3",
+      "visual_variant": "2"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l08_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l08_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l08_b01",
+      "x": 360,
+      "purpose": "teach_frequency_pair",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "frequency_pair",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l08_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_08/frequency_pair"
+      ]
+    },
+    {
+      "id": "l08_b02",
+      "x": 3000,
+      "purpose": "combine_frequency_pair",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "frequency_pair",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l08_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_08/frequency_pair"
+      ]
+    },
+    {
+      "id": "l08_b03",
+      "x": 6000,
+      "purpose": "pressure_frequency_pair",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "frequency_pair",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l08_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_08/frequency_pair"
+      ]
+    },
+    {
+      "id": "l08_b04",
+      "x": 8500,
+      "purpose": "clear_frequency_pair",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "frequency_pair",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l08_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_08/frequency_pair"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_08/manifest.json"
+}

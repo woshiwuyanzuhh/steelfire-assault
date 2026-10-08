@@ -1,0 +1,103 @@
+{
+  "id": "level_06_sand_ridge_entry",
+  "index": 6,
+  "act": 2,
+  "title": "沙脊入口",
+  "world_width": 11520,
+  "story_cue": "story_l06_intro",
+  "new_mechanic": {
+    "id": "sand_current",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "150",
+      "severity": "1",
+      "visual_variant": "0"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l06_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l06_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l06_b01",
+      "x": 360,
+      "purpose": "teach_sand_current",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "sand_current",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l06_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_06/sand_current"
+      ]
+    },
+    {
+      "id": "l06_b02",
+      "x": 3000,
+      "purpose": "combine_sand_current",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "sand_current",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l06_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_06/sand_current"
+      ]
+    },
+    {
+      "id": "l06_b03",
+      "x": 6000,
+      "purpose": "pressure_sand_current",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "sand_current",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l06_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_06/sand_current"
+      ]
+    },
+    {
+      "id": "l06_b04",
+      "x": 8500,
+      "purpose": "clear_sand_current",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "sand_current",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l06_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_06/sand_current"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_06/manifest.json"
+}

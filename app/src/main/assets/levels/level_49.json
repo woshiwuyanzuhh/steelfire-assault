@@ -1,0 +1,103 @@
+{
+  "id": "level_49_overdrive_weapon",
+  "index": 49,
+  "act": 10,
+  "title": "王座前线：过载武装",
+  "world_width": 11520,
+  "story_cue": "story_l49_intro",
+  "new_mechanic": {
+    "id": "overdrive_weapon",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "79",
+      "severity": "2",
+      "visual_variant": "1"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l49_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l49_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l49_b01",
+      "x": 360,
+      "purpose": "teach_overdrive_weapon",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "overdrive_weapon",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l49_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_49/overdrive_weapon"
+      ]
+    },
+    {
+      "id": "l49_b02",
+      "x": 3000,
+      "purpose": "combine_overdrive_weapon",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "overdrive_weapon",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l49_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_49/overdrive_weapon"
+      ]
+    },
+    {
+      "id": "l49_b03",
+      "x": 6000,
+      "purpose": "pressure_overdrive_weapon",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "overdrive_weapon",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l49_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_49/overdrive_weapon"
+      ]
+    },
+    {
+      "id": "l49_b04",
+      "x": 8500,
+      "purpose": "clear_overdrive_weapon",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "overdrive_weapon",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l49_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_49/overdrive_weapon"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_49/manifest.json"
+}

@@ -1,0 +1,143 @@
+{
+  "id": "level_25_sky_interceptor_ring",
+  "index": 25,
+  "act": 5,
+  "title": "天穹拦截环",
+  "world_width": 11520,
+  "story_cue": "story_l25_intro",
+  "new_mechanic": {
+    "id": "rotating_gravity",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "127",
+      "severity": "2",
+      "visual_variant": "1"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l25_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l25_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l25_b01",
+      "x": 360,
+      "purpose": "teach_rotating_gravity",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "rotating_gravity",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l25_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_25/rotating_gravity"
+      ]
+    },
+    {
+      "id": "l25_b02",
+      "x": 3000,
+      "purpose": "combine_rotating_gravity",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "rotating_gravity",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l25_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_25/rotating_gravity"
+      ]
+    },
+    {
+      "id": "l25_b03",
+      "x": 6000,
+      "purpose": "pressure_rotating_gravity",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "rotating_gravity",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l25_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_25/rotating_gravity"
+      ]
+    },
+    {
+      "id": "l25_b04",
+      "x": 8500,
+      "purpose": "clear_rotating_gravity",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "rotating_gravity",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l25_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_25/rotating_gravity"
+      ]
+    },
+    {
+      "id": "l25_b05",
+      "x": 10200,
+      "purpose": "boss_arena_rotating_gravity",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "rotating_gravity",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l25_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_25/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l25_sky_interceptor_ring",
+    "name": "天穹拦截环",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_25/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_25/manifest.json"
+}

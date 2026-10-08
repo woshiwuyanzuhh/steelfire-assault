@@ -1,0 +1,4 @@
+1489117340f637b9aa752cf3bd795536d08e98a6e5404ef99a9a517150e90908  dist/steelfire-assault-v0.1.1/steelfire-assault-v0.1.1-debug.apk
+
+
+

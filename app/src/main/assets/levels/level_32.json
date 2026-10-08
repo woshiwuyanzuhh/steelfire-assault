@@ -1,0 +1,103 @@
+{
+  "id": "level_32_spore_purifier",
+  "index": 32,
+  "act": 7,
+  "title": "孢雾净化线：三阀分流",
+  "world_width": 11520,
+  "story_cue": "story_l32_intro",
+  "new_mechanic": {
+    "id": "spore_purifier",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "128",
+      "severity": "3",
+      "visual_variant": "2"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l32_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l32_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l32_b01",
+      "x": 360,
+      "purpose": "teach_spore_purifier",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "spore_purifier",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l32_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_32/spore_purifier"
+      ]
+    },
+    {
+      "id": "l32_b02",
+      "x": 3000,
+      "purpose": "combine_spore_purifier",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "spore_purifier",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l32_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_32/spore_purifier"
+      ]
+    },
+    {
+      "id": "l32_b03",
+      "x": 6000,
+      "purpose": "pressure_spore_purifier",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "spore_purifier",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l32_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_32/spore_purifier"
+      ]
+    },
+    {
+      "id": "l32_b04",
+      "x": 8500,
+      "purpose": "clear_spore_purifier",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "spore_purifier",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l32_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_32/spore_purifier"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_32/manifest.json"
+}

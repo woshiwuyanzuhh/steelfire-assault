@@ -1,0 +1,103 @@
+{
+  "id": "level_38_rotary_tunnel",
+  "index": 38,
+  "act": 8,
+  "title": "井壁环廊：旋转掘进",
+  "world_width": 11520,
+  "story_cue": "story_l38_intro",
+  "new_mechanic": {
+    "id": "rotary_tunnel",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "116",
+      "severity": "3",
+      "visual_variant": "2"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l38_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l38_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l38_b01",
+      "x": 360,
+      "purpose": "teach_rotary_tunnel",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "rotary_tunnel",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l38_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_38/rotary_tunnel"
+      ]
+    },
+    {
+      "id": "l38_b02",
+      "x": 3000,
+      "purpose": "combine_rotary_tunnel",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "rotary_tunnel",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l38_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_38/rotary_tunnel"
+      ]
+    },
+    {
+      "id": "l38_b03",
+      "x": 6000,
+      "purpose": "pressure_rotary_tunnel",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "rotary_tunnel",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l38_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_38/rotary_tunnel"
+      ]
+    },
+    {
+      "id": "l38_b04",
+      "x": 8500,
+      "purpose": "clear_rotary_tunnel",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "rotary_tunnel",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l38_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_38/rotary_tunnel"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_38/manifest.json"
+}

@@ -1,0 +1,143 @@
+{
+  "id": "level_20_furnace_forged_warden",
+  "index": 20,
+  "act": 4,
+  "title": "熔炉铸卫",
+  "world_width": 11520,
+  "story_cue": "story_l20_intro",
+  "new_mechanic": {
+    "id": "forge_overheat",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "152",
+      "severity": "3",
+      "visual_variant": "2"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l20_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l20_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l20_b01",
+      "x": 360,
+      "purpose": "teach_forge_overheat",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "forge_overheat",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l20_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_20/forge_overheat"
+      ]
+    },
+    {
+      "id": "l20_b02",
+      "x": 3000,
+      "purpose": "combine_forge_overheat",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "forge_overheat",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l20_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_20/forge_overheat"
+      ]
+    },
+    {
+      "id": "l20_b03",
+      "x": 6000,
+      "purpose": "pressure_forge_overheat",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "forge_overheat",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l20_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_20/forge_overheat"
+      ]
+    },
+    {
+      "id": "l20_b04",
+      "x": 8500,
+      "purpose": "clear_forge_overheat",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "forge_overheat",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l20_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_20/forge_overheat"
+      ]
+    },
+    {
+      "id": "l20_b05",
+      "x": 10200,
+      "purpose": "boss_arena_forge_overheat",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "forge_overheat",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l20_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_20/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l20_furnace_forged_warden",
+    "name": "熔炉铸卫",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_20/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_20/manifest.json"
+}

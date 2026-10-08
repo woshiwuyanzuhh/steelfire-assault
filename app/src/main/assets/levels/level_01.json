@@ -1,0 +1,79 @@
+{
+  "id": "level_01_rust_harbor_departure",
+  "index": 1,
+  "act": 1,
+  "title": "锈港起航",
+  "world_width": 11520,
+  "story_cue": "story_l01_intro",
+  "new_mechanic": {
+    "id": "magnetic_cover",
+    "version": 1,
+    "lock_cooldown_ticks": 12,
+    "boxes": [
+      {
+        "id": "cargo_box_a",
+        "lock_id": "mag_lock_a",
+        "x": 1460,
+        "y": 318,
+        "min_offset": -96,
+        "max_offset": 64,
+        "step": 32,
+        "presses_door": "service_gate_a"
+      },
+      {
+        "id": "cargo_box_b",
+        "lock_id": "mag_lock_b",
+        "x": 2080,
+        "y": 286,
+        "min_offset": -64,
+        "max_offset": 96,
+        "step": 32,
+        "presses_door": "escape_gate"
+      }
+    ]
+  },
+  "checkpoints": [
+    {"id": "l01_checkpoint", "x": 2400},
+    {"id": "l01_clear", "x": 7200}
+  ],
+  "beats": [
+    {
+      "id": "l01_b01",
+      "x": 360,
+      "purpose": "teach_magnetic_cover",
+      "enemy_kinds": ["regular", "elite"],
+      "mechanic_params": {"id": "magnetic_cover", "box_id": "cargo_box_a"},
+      "story_cue": "story_l01_intro",
+      "asset_refs": ["gfx/backgrounds/industrial_port.png", "procedural:levels/level_01/magnetic_crate"]
+    },
+    {
+      "id": "l01_b02",
+      "x": 1460,
+      "purpose": "move_cover_under_crossfire",
+      "enemy_kinds": ["regular", "shield_carrier"],
+      "mechanic_params": {"id": "magnetic_cover", "box_id": "cargo_box_a"},
+      "story_cue": "story_l01_mid",
+      "asset_refs": ["gfx/characters/enemy_sheet.png", "procedural:levels/level_01/magnetic_lock"]
+    },
+    {
+      "id": "l01_b03",
+      "x": 2080,
+      "purpose": "press_service_gate",
+      "enemy_kinds": ["regular", "short_hop_drone"],
+      "mechanic_params": {"id": "magnetic_cover", "box_id": "cargo_box_b"},
+      "story_cue": "story_l01_mid",
+      "asset_refs": ["gfx/backgrounds/industrial_port.png", "procedural:levels/level_01/gate_press"]
+    },
+    {
+      "id": "l01_b04",
+      "x": 3600,
+      "purpose": "escape_route_pressure",
+      "enemy_kinds": ["elite", "shield_carrier"],
+      "mechanic_params": {"id": "magnetic_cover", "box_id": "cargo_box_b"},
+      "story_cue": "story_l01_end",
+      "asset_refs": ["gfx/characters/operative_sheet.png", "procedural:levels/level_01/navigation_key"]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_01/manifest.json"
+}

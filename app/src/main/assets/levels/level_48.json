@@ -1,0 +1,103 @@
+{
+  "id": "level_48_collapse_rhythm",
+  "index": 48,
+  "act": 10,
+  "title": "反应堆断层：坍塌节拍",
+  "world_width": 11520,
+  "story_cue": "story_l48_intro",
+  "new_mechanic": {
+    "id": "collapse_rhythm",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "156",
+      "severity": "1",
+      "visual_variant": "0"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l48_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l48_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l48_b01",
+      "x": 360,
+      "purpose": "teach_collapse_rhythm",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "collapse_rhythm",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l48_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_48/collapse_rhythm"
+      ]
+    },
+    {
+      "id": "l48_b02",
+      "x": 3000,
+      "purpose": "combine_collapse_rhythm",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "collapse_rhythm",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l48_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_48/collapse_rhythm"
+      ]
+    },
+    {
+      "id": "l48_b03",
+      "x": 6000,
+      "purpose": "pressure_collapse_rhythm",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "collapse_rhythm",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l48_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_48/collapse_rhythm"
+      ]
+    },
+    {
+      "id": "l48_b04",
+      "x": 8500,
+      "purpose": "clear_collapse_rhythm",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "collapse_rhythm",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l48_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_48/collapse_rhythm"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_48/manifest.json"
+}

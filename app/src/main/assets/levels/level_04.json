@@ -1,0 +1,103 @@
+{
+  "id": "level_04_silent_warehouse",
+  "index": 4,
+  "act": 1,
+  "title": "仓门静默",
+  "world_width": 11520,
+  "story_cue": "story_l04_intro",
+  "new_mechanic": {
+    "id": "stealth_alert",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "124",
+      "severity": "2",
+      "visual_variant": "4"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l04_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l04_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l04_b01",
+      "x": 360,
+      "purpose": "teach_stealth_alert",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "stealth_alert",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l04_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_04/stealth_alert"
+      ]
+    },
+    {
+      "id": "l04_b02",
+      "x": 3000,
+      "purpose": "combine_stealth_alert",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "stealth_alert",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l04_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_04/stealth_alert"
+      ]
+    },
+    {
+      "id": "l04_b03",
+      "x": 6000,
+      "purpose": "pressure_stealth_alert",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "stealth_alert",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l04_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_04/stealth_alert"
+      ]
+    },
+    {
+      "id": "l04_b04",
+      "x": 8500,
+      "purpose": "clear_stealth_alert",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "stealth_alert",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l04_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_04/stealth_alert"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_04/manifest.json"
+}

@@ -1,0 +1,103 @@
+{
+  "id": "level_11_salt_fog_landing",
+  "index": 11,
+  "act": 3,
+  "title": "盐雾登陆",
+  "world_width": 11520,
+  "story_cue": "story_l11_intro",
+  "new_mechanic": {
+    "id": "tide_cover",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "125",
+      "severity": "3",
+      "visual_variant": "5"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l11_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l11_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l11_b01",
+      "x": 360,
+      "purpose": "teach_tide_cover",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "tide_cover",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l11_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_11/tide_cover"
+      ]
+    },
+    {
+      "id": "l11_b02",
+      "x": 3000,
+      "purpose": "combine_tide_cover",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "tide_cover",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l11_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_11/tide_cover"
+      ]
+    },
+    {
+      "id": "l11_b03",
+      "x": 6000,
+      "purpose": "pressure_tide_cover",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "tide_cover",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l11_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_11/tide_cover"
+      ]
+    },
+    {
+      "id": "l11_b04",
+      "x": 8500,
+      "purpose": "clear_tide_cover",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "tide_cover",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l11_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_11/tide_cover"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_11/manifest.json"
+}

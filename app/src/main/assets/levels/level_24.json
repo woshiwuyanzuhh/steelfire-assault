@@ -1,0 +1,103 @@
+{
+  "id": "level_24_gravity_inversion",
+  "index": 24,
+  "act": 5,
+  "title": "重力倒悬",
+  "world_width": 11520,
+  "story_cue": "story_l24_intro",
+  "new_mechanic": {
+    "id": "gravity_anchor",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "114",
+      "severity": "1",
+      "visual_variant": "0"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l24_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l24_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l24_b01",
+      "x": 360,
+      "purpose": "teach_gravity_anchor",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "gravity_anchor",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l24_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_24/gravity_anchor"
+      ]
+    },
+    {
+      "id": "l24_b02",
+      "x": 3000,
+      "purpose": "combine_gravity_anchor",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "gravity_anchor",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l24_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_24/gravity_anchor"
+      ]
+    },
+    {
+      "id": "l24_b03",
+      "x": 6000,
+      "purpose": "pressure_gravity_anchor",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "gravity_anchor",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l24_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_24/gravity_anchor"
+      ]
+    },
+    {
+      "id": "l24_b04",
+      "x": 8500,
+      "purpose": "clear_gravity_anchor",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "gravity_anchor",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l24_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_24/gravity_anchor"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_24/manifest.json"
+}

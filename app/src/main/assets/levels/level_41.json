@@ -1,0 +1,103 @@
+{
+  "id": "level_41_reflection_gates",
+  "index": 41,
+  "act": 9,
+  "title": "镜库门厅：反射识别",
+  "world_width": 11520,
+  "story_cue": "story_l41_intro",
+  "new_mechanic": {
+    "id": "reflection_gates",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "155",
+      "severity": "3",
+      "visual_variant": "5"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l41_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l41_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l41_b01",
+      "x": 360,
+      "purpose": "teach_reflection_gates",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "reflection_gates",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l41_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_41/reflection_gates"
+      ]
+    },
+    {
+      "id": "l41_b02",
+      "x": 3000,
+      "purpose": "combine_reflection_gates",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "reflection_gates",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l41_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_41/reflection_gates"
+      ]
+    },
+    {
+      "id": "l41_b03",
+      "x": 6000,
+      "purpose": "pressure_reflection_gates",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "reflection_gates",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l41_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_41/reflection_gates"
+      ]
+    },
+    {
+      "id": "l41_b04",
+      "x": 8500,
+      "purpose": "clear_reflection_gates",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "reflection_gates",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l41_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_41/reflection_gates"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_41/manifest.json"
+}

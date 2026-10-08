@@ -1,0 +1,143 @@
+{
+  "id": "level_10_sand_ridge_beacon_carrier",
+  "index": 10,
+  "act": 2,
+  "title": "沙脊信标母舰",
+  "world_width": 11520,
+  "story_cue": "story_l10_intro",
+  "new_mechanic": {
+    "id": "beacon_safe_zone",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "112",
+      "severity": "2",
+      "visual_variant": "4"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l10_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l10_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l10_b01",
+      "x": 360,
+      "purpose": "teach_beacon_safe_zone",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "beacon_safe_zone",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l10_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_10/beacon_safe_zone"
+      ]
+    },
+    {
+      "id": "l10_b02",
+      "x": 3000,
+      "purpose": "combine_beacon_safe_zone",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "beacon_safe_zone",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l10_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_10/beacon_safe_zone"
+      ]
+    },
+    {
+      "id": "l10_b03",
+      "x": 6000,
+      "purpose": "pressure_beacon_safe_zone",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "beacon_safe_zone",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l10_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_10/beacon_safe_zone"
+      ]
+    },
+    {
+      "id": "l10_b04",
+      "x": 8500,
+      "purpose": "clear_beacon_safe_zone",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "beacon_safe_zone",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l10_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_10/beacon_safe_zone"
+      ]
+    },
+    {
+      "id": "l10_b05",
+      "x": 10200,
+      "purpose": "boss_arena_beacon_safe_zone",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "beacon_safe_zone",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l10_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_10/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l10_sand_ridge_beacon_carrier",
+    "name": "沙脊信标母舰",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_10/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_10/manifest.json"
+}

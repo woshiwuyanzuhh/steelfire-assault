@@ -1,0 +1,14 @@
+.tools/
+.gradle/
+.asset-cache/
+.kotlin/
+app/build/
+dist/
+tmp/
+local.properties
+*.iml
+*.blend1
+__pycache__/
+*.py[cod]
+.scratch/mattpocock-skills/
+.scratch/*.ps1

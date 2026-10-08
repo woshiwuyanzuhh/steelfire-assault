@@ -1,0 +1,103 @@
+{
+  "id": "level_26_magnetic_freight",
+  "index": 26,
+  "act": 6,
+  "title": "磁轨货港：冷链劫运",
+  "world_width": 11520,
+  "story_cue": "story_l26_intro",
+  "new_mechanic": {
+    "id": "magnetic_freight",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "140",
+      "severity": "3",
+      "visual_variant": "2"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l26_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l26_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l26_b01",
+      "x": 360,
+      "purpose": "teach_magnetic_freight",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "magnetic_freight",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l26_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_26/magnetic_freight"
+      ]
+    },
+    {
+      "id": "l26_b02",
+      "x": 3000,
+      "purpose": "combine_magnetic_freight",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "magnetic_freight",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l26_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_26/magnetic_freight"
+      ]
+    },
+    {
+      "id": "l26_b03",
+      "x": 6000,
+      "purpose": "pressure_magnetic_freight",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "magnetic_freight",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l26_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_26/magnetic_freight"
+      ]
+    },
+    {
+      "id": "l26_b04",
+      "x": 8500,
+      "purpose": "clear_magnetic_freight",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "magnetic_freight",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l26_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_26/magnetic_freight"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_26/manifest.json"
+}

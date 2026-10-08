@@ -1,0 +1,103 @@
+{
+  "id": "level_21_cloudport_boarding",
+  "index": 21,
+  "act": 5,
+  "title": "云端登舱",
+  "world_width": 11520,
+  "story_cue": "story_l21_intro",
+  "new_mechanic": {
+    "id": "zero_g_thrust",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "75",
+      "severity": "1",
+      "visual_variant": "3"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l21_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l21_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l21_b01",
+      "x": 360,
+      "purpose": "teach_zero_g_thrust",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "zero_g_thrust",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l21_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_21/zero_g_thrust"
+      ]
+    },
+    {
+      "id": "l21_b02",
+      "x": 3000,
+      "purpose": "combine_zero_g_thrust",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "zero_g_thrust",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l21_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_21/zero_g_thrust"
+      ]
+    },
+    {
+      "id": "l21_b03",
+      "x": 6000,
+      "purpose": "pressure_zero_g_thrust",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "zero_g_thrust",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l21_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_21/zero_g_thrust"
+      ]
+    },
+    {
+      "id": "l21_b04",
+      "x": 8500,
+      "purpose": "clear_zero_g_thrust",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "zero_g_thrust",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l21_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_21/zero_g_thrust"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_21/manifest.json"
+}

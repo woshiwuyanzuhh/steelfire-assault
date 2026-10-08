@@ -1,0 +1,5 @@
+UI-02 static evidence
+ControlLayout hitRect geometry: PASS
+action dock geometry: PASS
+verify_ui_save.py: PASS
+Device: ADB unavailable on 2026-10-04; multi-touch recording pending reconnect

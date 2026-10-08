@@ -1,0 +1,143 @@
+{
+  "id": "level_30_frostline_cannon_boss",
+  "index": 30,
+  "act": 6,
+  "title": "霜线列车炮：移动堡垒决战",
+  "world_width": 11520,
+  "story_cue": "story_l30_intro",
+  "new_mechanic": {
+    "id": "frostline_cannon",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "102",
+      "severity": "1",
+      "visual_variant": "0"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l30_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l30_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l30_b01",
+      "x": 360,
+      "purpose": "teach_frostline_cannon",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "frostline_cannon",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l30_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_30/frostline_cannon"
+      ]
+    },
+    {
+      "id": "l30_b02",
+      "x": 3000,
+      "purpose": "combine_frostline_cannon",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "frostline_cannon",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l30_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_30/frostline_cannon"
+      ]
+    },
+    {
+      "id": "l30_b03",
+      "x": 6000,
+      "purpose": "pressure_frostline_cannon",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "frostline_cannon",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l30_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_30/frostline_cannon"
+      ]
+    },
+    {
+      "id": "l30_b04",
+      "x": 8500,
+      "purpose": "clear_frostline_cannon",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "frostline_cannon",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l30_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_30/frostline_cannon"
+      ]
+    },
+    {
+      "id": "l30_b05",
+      "x": 10200,
+      "purpose": "boss_arena_frostline_cannon",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "frostline_cannon",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l30_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_30/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l30_frostline_cannon_boss",
+    "name": "霜线列车炮：移动堡垒决战",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_30/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_30/manifest.json"
+}

@@ -1,0 +1,143 @@
+{
+  "id": "level_45_mirror_entity_boss",
+  "index": 45,
+  "act": 9,
+  "title": "黑潮镜像体：终极回声",
+  "world_width": 11520,
+  "story_cue": "story_l45_intro",
+  "new_mechanic": {
+    "id": "mirror_entity",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "117",
+      "severity": "1",
+      "visual_variant": "3"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l45_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l45_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l45_b01",
+      "x": 360,
+      "purpose": "teach_mirror_entity",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "mirror_entity",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l45_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_45/mirror_entity"
+      ]
+    },
+    {
+      "id": "l45_b02",
+      "x": 3000,
+      "purpose": "combine_mirror_entity",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "mirror_entity",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l45_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_45/mirror_entity"
+      ]
+    },
+    {
+      "id": "l45_b03",
+      "x": 6000,
+      "purpose": "pressure_mirror_entity",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "mirror_entity",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l45_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_45/mirror_entity"
+      ]
+    },
+    {
+      "id": "l45_b04",
+      "x": 8500,
+      "purpose": "clear_mirror_entity",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "mirror_entity",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l45_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_45/mirror_entity"
+      ]
+    },
+    {
+      "id": "l45_b05",
+      "x": 10200,
+      "purpose": "boss_arena_mirror_entity",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "mirror_entity",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l45_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_45/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l45_mirror_entity_boss",
+    "name": "黑潮镜像体：终极回声",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_45/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_45/manifest.json"
+}

@@ -1,0 +1,143 @@
+{
+  "id": "level_15_salt_fog_submersible",
+  "index": 15,
+  "act": 3,
+  "title": "盐雾潜航兽",
+  "world_width": 11520,
+  "story_cue": "story_l15_intro",
+  "new_mechanic": {
+    "id": "submersible_recoil",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "87",
+      "severity": "1",
+      "visual_variant": "3"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l15_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l15_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l15_b01",
+      "x": 360,
+      "purpose": "teach_submersible_recoil",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "submersible_recoil",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l15_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_15/submersible_recoil"
+      ]
+    },
+    {
+      "id": "l15_b02",
+      "x": 3000,
+      "purpose": "combine_submersible_recoil",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "submersible_recoil",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l15_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_15/submersible_recoil"
+      ]
+    },
+    {
+      "id": "l15_b03",
+      "x": 6000,
+      "purpose": "pressure_submersible_recoil",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "submersible_recoil",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l15_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_15/submersible_recoil"
+      ]
+    },
+    {
+      "id": "l15_b04",
+      "x": 8500,
+      "purpose": "clear_submersible_recoil",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "submersible_recoil",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l15_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_15/submersible_recoil"
+      ]
+    },
+    {
+      "id": "l15_b05",
+      "x": 10200,
+      "purpose": "boss_arena_submersible_recoil",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "submersible_recoil",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l15_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_15/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l15_salt_fog_submersible",
+    "name": "盐雾潜航兽",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_15/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_15/manifest.json"
+}

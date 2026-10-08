@@ -1,0 +1,103 @@
+{
+  "id": "level_22_antigravity_lift",
+  "index": 22,
+  "act": 5,
+  "title": "反重力货梯",
+  "world_width": 11520,
+  "story_cue": "story_l22_intro",
+  "new_mechanic": {
+    "id": "gravity_flip",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "88",
+      "severity": "2",
+      "visual_variant": "4"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l22_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l22_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l22_b01",
+      "x": 360,
+      "purpose": "teach_gravity_flip",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "gravity_flip",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l22_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_22/gravity_flip"
+      ]
+    },
+    {
+      "id": "l22_b02",
+      "x": 3000,
+      "purpose": "combine_gravity_flip",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "gravity_flip",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l22_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_22/gravity_flip"
+      ]
+    },
+    {
+      "id": "l22_b03",
+      "x": 6000,
+      "purpose": "pressure_gravity_flip",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "gravity_flip",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l22_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_22/gravity_flip"
+      ]
+    },
+    {
+      "id": "l22_b04",
+      "x": 8500,
+      "purpose": "clear_gravity_flip",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "gravity_flip",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l22_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_22/gravity_flip"
+      ]
+    }
+  ],
+  "boss": null,
+  "asset_manifest": "levels/level_22/manifest.json"
+}

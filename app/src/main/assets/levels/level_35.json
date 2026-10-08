@@ -1,0 +1,143 @@
+{
+  "id": "level_35_spore_core_boss",
+  "index": 35,
+  "act": 7,
+  "title": "绿幕孢核：净化心脏",
+  "world_width": 11520,
+  "story_cue": "story_l35_intro",
+  "new_mechanic": {
+    "id": "spore_core",
+    "version": 1,
+    "params": {
+      "cycle_ticks": "77",
+      "severity": "3",
+      "visual_variant": "5"
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "l35_checkpoint",
+      "x": 3300
+    },
+    {
+      "id": "l35_clear",
+      "x": 7200
+    }
+  ],
+  "beats": [
+    {
+      "id": "l35_b01",
+      "x": 360,
+      "purpose": "teach_spore_core",
+      "enemy_kinds": [
+        "regular",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "spore_core",
+        "interaction": "teach"
+      },
+      "story_cue": "story_l35_intro",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_35/spore_core"
+      ]
+    },
+    {
+      "id": "l35_b02",
+      "x": 3000,
+      "purpose": "combine_spore_core",
+      "enemy_kinds": [
+        "regular",
+        "elite"
+      ],
+      "mechanic_params": {
+        "id": "spore_core",
+        "interaction": "combine"
+      },
+      "story_cue": "story_l35_mid",
+      "asset_refs": [
+        "gfx/characters/enemy_sheet.png",
+        "procedural:levels/level_35/spore_core"
+      ]
+    },
+    {
+      "id": "l35_b03",
+      "x": 6000,
+      "purpose": "pressure_spore_core",
+      "enemy_kinds": [
+        "shield_carrier",
+        "short_hop_drone"
+      ],
+      "mechanic_params": {
+        "id": "spore_core",
+        "interaction": "pressure"
+      },
+      "story_cue": "story_l35_mid",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_35/spore_core"
+      ]
+    },
+    {
+      "id": "l35_b04",
+      "x": 8500,
+      "purpose": "clear_spore_core",
+      "enemy_kinds": [
+        "elite",
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "spore_core",
+        "interaction": "clear"
+      },
+      "story_cue": "story_l35_end",
+      "asset_refs": [
+        "gfx/characters/operative_sheet.png",
+        "procedural:levels/level_35/spore_core"
+      ]
+    },
+    {
+      "id": "l35_b05",
+      "x": 10200,
+      "purpose": "boss_arena_spore_core",
+      "enemy_kinds": [
+        "sentry"
+      ],
+      "mechanic_params": {
+        "id": "spore_core",
+        "interaction": "boss"
+      },
+      "story_cue": "story_l35_end",
+      "asset_refs": [
+        "gfx/backgrounds/industrial_port.png",
+        "procedural:levels/level_35/boss_core"
+      ]
+    }
+  ],
+  "boss": {
+    "id": "boss_l35_spore_core_boss",
+    "name": "绿幕孢核：净化心脏",
+    "phases": [
+      {
+        "id": "phase_1",
+        "weakpoint": "weakpoint_1",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_2",
+        "weakpoint": "weakpoint_2",
+        "warning_ticks": 30
+      },
+      {
+        "id": "phase_3",
+        "weakpoint": "weakpoint_3",
+        "warning_ticks": 30
+      }
+    ],
+    "asset_refs": [
+      "procedural:levels/level_35/boss_core"
+    ]
+  },
+  "asset_manifest": "levels/level_35/manifest.json"
+}
